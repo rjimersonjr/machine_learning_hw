@@ -53,3 +53,12 @@ tmp3 = tmp_1.* tmp_2; % (C1 - Mu_1) * (C2 - Mu_2)
 Covariance = sum(tmp_3) / (length(C1) - 1);
 
 fprintf('Covariance is %3.4f\n', Covariance);
+
+% plot the density vectors
+figure
+plot(C1,'ob');	% o - plot a circle, b - blue
+hold on
+plot(C2,'xr');	% x - plot a x, r - red
+title('Plotting estimated density');
+legend('C1','C2');
+axis([0 11 0 5]);
